@@ -41,7 +41,7 @@ This is best described as a **curated multi-source dataset**, not a newly collec
 ```python
 import pandas as pd
 
-df = pd.read_csv("salaryfusion-tech_dataset.csv")
+df = pd.read_csv("employee_salary_dataset_final.csv")
 
 print(df.head())
 print(df.columns)
@@ -117,7 +117,6 @@ The dataset was processed to make the sources comparable:
 ```
 employee_salary_dataset.ipynb
 employee_salary_dataset_final.csv
-employee_salary_audit.csv
 README.md
 LICENSE
 ```
@@ -141,7 +140,7 @@ Users must comply with original source licenses when using this dataset.
 ```bibtex
 @dataset{employee_salary_dataset,
   title   = {SalaryFusion-Tech},
-  url     = {https://github.com/fareehanezam/global-tech-salary-dataset}
+  url     = {https://github.com/fareehanezam/SalaryFusion-Tech-Dataset}
 }
 ```
 
