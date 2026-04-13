@@ -75,6 +75,27 @@ The dataset was processed to make the sources comparable:
 
 ---
 
+## Limitations & Practical Considerations
+
+While the dataset is cleaned and standardized, users should be aware of the following:
+
+- **Missing Data:**  
+  `skills_text` (~99% missing), `industry` (~75%), `education` & `skills_structured` (~57%), and `company` (~43%) contain significant missing values.
+
+- **Source Imbalance:**  
+  Uneven distribution across sources (Levels.fyi ~60K, Stack Overflow ~45K, Glassdoor ~457) may introduce bias. Use `sample_weight` during modeling.
+
+- **High Cardinality:**  
+  `location` (~1200+) and `role` (~300) have many unique values and require careful encoding.
+
+- **Outliers:**  
+  Experience values exceed 60+ years and salary ranges widely (4K–500K+), which may impact modeling.
+
+- **Target Variable Recommendation:**  
+  `log_salary` is preferred over `salary` for better distribution and model stability.
+
+---  
+
 ## Data Sources
 
 ### 1. Stack Overflow Developer Survey 2023
